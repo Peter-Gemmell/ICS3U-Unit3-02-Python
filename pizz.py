@@ -2,24 +2,22 @@
 
 # Created by Peter Gemmell
 # Created on March 2022
-# This program calculates the circumference of a circle using constants
+# This program is a simple guessing game
 
 import constants
 
 
 def main():
-    # this function calculates the cost of pizza
+    # this function makes a simple guessing game
 
     # input
-    diameter = int(input("Enter the diameter of the pizza you would like (inch): "))
+    guess_Number = int(input("Guess a number between 0-9 : "))
 
-    # process
-    sub_total = constants.LABOR + constants.RENT + (diameter * constants.COST_PER_INCH)
-    total = sub_total + (sub_total * constants.HST)
-
-    # output
-    print("")
-    print("The cost of a {0} inch pizza is ${1:,.2f}".format(diameter, total))
+    # process & output
+    if guess_Number == constants.mystery_Number:
+        print("You guessed correctly!")
+    if guess_Number != constants.mystery_Number:
+        print("You guessed incorrectly.")
     print("\nDone.")
 
 
